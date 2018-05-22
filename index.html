@@ -28,10 +28,356 @@
           <h1>Dr. Upal<br>Is In:</h1>
           <h2>Healthcheck your site!</h2>
         </section>
-				<section>
-          <h2>Slide 1</h2>
-          <p>Sphinx of black quartz, judge my vow.</p>
+
+        <section>
+          <h2>"Where's the links?"</h2>
+          <p>socketwench.github.io/healthcheck-your-site</p>
         </section>
+
+        <section>
+          <section data-transition="none" data-background-transition="none" data-background="images/socketwench1.png" data-background-size="contain">
+            &nbsp;
+          </section>
+          <section data-transition="none" data-background-transition="none" data-background="images/socketwench2.png" data-background-size="contain">
+            &nbsp;
+          </section>
+          <section data-transition="none" data-background-transition="none" data-background="images/socketwench3.png" data-background-size="contain">
+            &nbsp;
+          </section>
+					<section data-transition="none" data-background-transition="none" data-background="images/socketwench4.png" data-background-size="contain">
+            &nbsp;
+          </section>
+					<section data-transition="none" data-background-transition="none" data-background="images/socketwench5.png" data-background-size="contain">
+            &nbsp;
+          </section>
+          <section data-background="images/teamten7.jpeg" class="teamten7">
+            <img src="images/TEN7-logo.png" />
+            <p>Full service web firm</p>
+            <p>Drupal, design, UX, hosting</p>
+            <p><a href="mailto:hi@ten7.com">hi@ten7.com</a></p>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h1>"But my site is fine!"</h1>
+          </section>
+          <!-- Comic of how problems get normalized and your experience isn't universal -->
+  				<section>
+            <h2>Every site is healthy</h2>
+            <p class="fragment">...until it isn't.</p>
+          </section>
+          <section>
+            <h2>A feeling isn't an audit</h2>
+          </section>
+          <section>
+            <h2>Your experience is not universal</h2>
+            <p>Anonymous survey, external agency</p>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h1>Checking the basics</h1>
+          </section>
+          <!--
+            COMIC:
+            I think my site works fine,
+            but I don't know if it's healthy either.
+            What are some things I can check *right* *now*?
+          -->
+          <section>
+            <h2>Checking for updates</h2>
+            <p class="fragment">Yes, really.</p>
+            <p class="fragment">The most basic, important thing you can do!</p>
+          </section>
+          <section>
+            <h2>Using the Update Report</h2>
+            <p class="fragment">Admin &gt; Reports &gt; Available Updates</p>
+          </section>
+          <section>
+            <h2>I can't find it!</h2>
+            <p class="fragment">Provided by the <strong>Update Manager</strong> module</p>
+            <p class="fragment">May be disabled on production sites</p>
+          </section>
+          <section>
+            <h2>Enabling Update Manager</h2>
+            <p class="fragment">Admin &gt; Extend</p>
+          </section>
+          <!--
+            COMIC
+            O_O
+          -->
+          <section>
+            <h2>Don't panic!</h2>
+            <p class="fragment">Your site won't be a "sea of green"</p>
+          </section>
+          <section data-background="images/Dogma_Central_Emergency.png" data-background-size="cover">
+            <h2>Look for Red</h2>
+            <p class="fragment">Security updates, unsupported modules</p>
+            <p class="fragment">Take Action ASAP!</p>
+          </section>
+          <section>
+            <h2>Action, not Update!</h2>
+            <p class="fragment">Some sites require out-of-date modules</p>
+            <p class="fragment"><strong>Always</strong> ask your team first!</p>
+          </section>
+          <!--
+            COMIC
+            What else can we check?
+          -->
+          <section>
+            <h2>Status Report</h2>
+            <p class="fragment">Overview of your site</p>
+            <p class="fragment">Admin &gt; Reports &gt; Status</p>
+          </section>
+          <section>
+            <h2>Look for red</h2>
+            <p class="fragment">Misconfigurations</p>
+            <p class="fragment">Updates required</p>
+            <p class="fragment">Down connections to external services</p>
+          </section>
+          <section>
+            <h2>Checking Caching</h2>
+            <p class="fragment">Admin &gt; Configuration &gt; Development &gt; Performance</p>
+          </section>
+          <section>
+            <h2>Caching best practices</h2>
+            <p class="fragment">CSS and JS files Aggregated</p>
+            <p class="fragment">Page cache maxium age set*</p>
+            <small class="fragment">* Most sites</small>
+          </section>
+          <section>
+            <h2>Check your log</h2>
+            <p class="fragment">Don't look for specific errors...</p>
+            <p class="fragment">...look for frequency of severe errors!</p>
+          </section>
+          <section>
+            <h2>Using the DB Log</h2>
+            <p class="fragment">dblog enabled for most sites</p>
+            <p class="fragment">Admin &gt; Reports &gt; Recent Log Messages</p>
+          </section>
+          <!--
+            COMIC
+            [Character looks at list of things that get bigger and messier until they overlap]
+            STOP!
+            There's no way I can remember all of this!
+            Is there an easier way?
+          -->
+        </section>
+
+        <section>
+          <section>
+            <h1>Automating Checks</h1>
+          </section>
+          <section>
+            <h2>Site Audit module</h2>
+            <p class="fragment">Gathers data, runs best practice checks</p>
+            <p class="fragment"><a href="https://www.drupal.org/project/site_audit">drupal.org/project/site_audit</a></p>
+          </section>
+          <section>
+            <h2>Requires drush</h2>
+            <p class="fragment">Command Line tool for Drupal</p>
+            <p class="fragment"><a href="http://docs.drush.org/en/master/install/">docs.drush.org/en/master/install</a></p>
+          </section>
+          <section>
+            <h2>Installation for D7</h2>
+            <p class="fragment"><code>drush en -y site_audit</code></p>
+            <p class="fragment"><code>drush cc all</code></p>
+          </section>
+          <section>
+            <h2>Installation for D8</h2>
+            <p class="fragment"><code>composer require drupal/site_audit</code></p>
+            <p class="fragment"><code>mkdir drush</code></p>
+            <p class="fragment"><code>mv modules/contrib/site_audit drush/</code></p>
+            <p class="fragment"><code>drush cr drush</code></p>
+          </section>
+          <!--
+            COMIC
+            Okay, that's installed,
+            How do I run a report?
+          -->
+          <section>
+            <pre><code class="shell">cd path/to/your/site</code></pre>
+            <pre class="fragment"><code class="shell">drush aa
+  --html
+  --bootstrap
+  --detail
+  --skip=insights
+  > path/to/report.html</code></pre>
+          </section>
+          <!--
+            COMIC
+            What is all this stuff!?
+              Best Practice Checks
+              Caching Configuration
+              Update Status
+              Content inspection
+              Technical statistics
+            Okay, but how much do I need to actually *read*?
+          -->
+          <section>
+            <h2>Best Practice Checks</h2>
+            <p>Read them all!</p>
+            <p>Highest value checks in the whole report</p>
+          </section>
+          <section>
+            <h2>services.yml warning</h2>
+            <p>Techincally correct, but...</p>
+            <p>...core's own services.yml is preferred.</p>
+            <small><a href="https://www.drupal.org/project/drupal/issues/2547447">drupal.org/project/drupal/issues/2547447</a></small>
+          </section>
+          <section>
+            <h2>Caching Settings</h2>
+            <p>Best performance value for small sites</p>
+            <p>Consider cache minimum lifetime carefully!</p>
+          </section>
+          <section>
+            <h2>Content checks</h2>
+            <p>More FYI than problem-finding</p>
+            <p>Does not replace a content audit</p>
+          </section>
+          <section>
+            <h2>Technical stats</h2>
+            <p>File, code, DB sizes</p>
+            <p>Sometimes useful! Depends on your site.</p>
+          </section>
+          <!--
+            COMIC
+            What else can Site Audit do?
+          -->
+          <section>
+            <h2>Status and Updates</h2>
+            <p>Same as Update Manager and Status Report</p>
+            <p>Replaces manual steps, no login needed!</p>
+          </section>
+          <section>
+            <h2>PHP code analysis</h2>
+            <p>Code smells, copy-pasting, mess detection</p>
+            <p>Requires additional composer-installed utilites</p>
+          </section>
+          <section>
+            <h2>Even more things</h2>
+            <p>Site Audit is extensible!</p>
+            <p>Reports differ slightly between D7 & D8</p>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h1>Infrastructure checkups</h1>
+          </section>
+          <section>
+            <h2>Where're you hosted?</h2>
+            <p class="fragment">Shared hosting</p>
+            <p class="fragment">Managed hosting (Pantheon, Acquia)</p>
+            <p class="fragment">Self-managed (VPS)</p>
+          </section>
+          <section>
+            <h2>Still happy with it?</h2>
+            <p class="fragment">What was your primary motive?</p>
+            <p class="fragment">Is that still true?</p>
+          </section>
+          <section>
+            <h2>PHP Version</h2>
+            <p class="fragment">D8 should always be on PHP 7.</p>
+            <p class="fragment">For D7, try PHP 7, otherwise PHP 5.6</p>
+          </section>
+          <section>
+            <h2>"Updating" PHP</h2>
+            <p>Actual updates are rare</p>
+            <p>Better to move to new server/hosting</p>
+          </section>
+          <section>
+            <h2>CLI vs. Web PHP</h2>
+            <p>Can be different, creates drush problems</p>
+            <p>PHP version should be the same</p>
+            <p>Configuration should be as close as possible!</p>
+          </section>
+          <section>
+            <h2>Database server</h2>
+            <p>Same or separate server, latency is the key!</p>
+            <p>Common problem for shared hosts</p>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h1>Workflow checkups</h1>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h1>Using Hacked module</h1>
+          </section>
+          <section>
+            <h2>When to use</h2>
+            <p class="fragment">Your use ftp (not git or CI) to deploy</p>
+            <p class="fragment">You haven't updated in ages</p>
+            <p class="fragment">You suspect a breach</p>
+          </section>
+          <section>
+            <h2>Non-security reasons</h2>
+            <p class="fragment">Whenever you adopt a site</p>
+            <p class="fragment">Bad practice core or module modification</p>
+          </section>
+          <section>
+            <h2>Run against Live</h2>
+            <p class="fragment">Results can differ with your local</p>
+            <p class="fragment">Module can be removed after use</p>
+          </section>
+          <section>
+            <h2>Installation</h2>
+            <pre><code class="shell">composer require drupal/hacked</code></pre>
+            <pre><code class="shell">drush en -y hacked</code></pre>
+          </section>
+          <section>
+            <h2>Running the report</h2>
+            <p class="fragment">Admin &gt; Reports &gt; Hacked</p>
+          </section>
+          <section>
+            <h2>False Positives</h2>
+            <p class="fragment">Minor changes can flag a module</p>
+            <p class="fragment">Missing READMEs, line-endings, best-practice changes</p>
+          </section>
+          <section>
+            <img src="images/docker.test_admin_reports_hacked.png" />
+          </section>
+          <section>
+            <h2>Getting detailed results</h2>
+            <p class="fragment">Install the <code>diff</code> module</p>
+            <p class="fragment">Displays individual line changes</p>
+          </section>
+          <section>
+            <img src="images/docker.test_admin_reports_hacked_flag_diff1.png" />
+          </section>
+          <section>
+            <img src="images/docker.test_admin_reports_hacked_flag_diff2.png" />
+          </section>
+          <section>
+            <img src="images/docker.test_admin_reports_hacked_flag_diff3.png" />
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h1>Spotting a hack</h1>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h1>Recovering from a hack</h1>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h1>When to ask for help</h1>
+          </section>
+        </section>
+
 			</div>
 		</div>
 
