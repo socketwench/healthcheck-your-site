@@ -10,20 +10,28 @@
  * GLOBAL STYLES
  *********************************************/
 body {
-  background: #add9e4;
+color: #E8E8E8;
+display: block;
+background-color: #33543e;
+background-image: url('../../images/background.png');
+background-size: cover;
+background-repeat: no-repeat;
+position: relative;
+  /* background: #add9e4;
   background: -moz-radial-gradient(center, circle cover, #f7fbfc 0%, #add9e4 100%);
   background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #f7fbfc), color-stop(100%, #add9e4));
   background: -webkit-radial-gradient(center, circle cover, #f7fbfc 0%, #add9e4 100%);
   background: -o-radial-gradient(center, circle cover, #f7fbfc 0%, #add9e4 100%);
   background: -ms-radial-gradient(center, circle cover, #f7fbfc 0%, #add9e4 100%);
   background: radial-gradient(center, circle cover, #f7fbfc 0%, #add9e4 100%);
-  background-color: #f7fbfc; }
+  background-color: #f7fbfc; */
+}
 
 .reveal {
   font-family: "Lato", sans-serif;
   font-size: 40px;
   font-weight: normal;
-  color: #333; }
+  color: #E8E8E8; }
 
 ::selection {
   color: #fff;
@@ -50,7 +58,7 @@ body {
 .reveal h5,
 .reveal h6 {
   margin: 0 0 20px 0;
-  color: #333;
+  color: #E8E8E8;
   font-family: 'Architects Daughter', cursive;
   font-weight: normal;
   line-height: 1.2;
@@ -58,12 +66,12 @@ body {
   word-wrap: break-word; }
 
 .reveal h1 {
-  font-size: 3.77em;
+  font-size: 2.44em;
   font-family: 'Permanent Marker', cursive;
  }
 
 .reveal h2 {
-  font-size: 2.11em; }
+  font-size: 1.88em; }
 
 .reveal h3 {
   font-size: 1.55em; }
@@ -150,7 +158,7 @@ body {
   width: 90%;
   margin: 20px auto;
   text-align: left;
-  font-size: 0.55em;
+  font-size: 0.77em;
   font-family: monospace;
   line-height: 1.2em;
   word-wrap: break-word; }
@@ -211,16 +219,13 @@ body {
  * LINKS
  *********************************************/
 .reveal a {
-  color: #3b759e;
+  color: #ff0;
   text-decoration: none;
   -webkit-transition: color .15s ease;
   -moz-transition: color .15s ease;
   transition: color .15s ease; }
 
-.reveal a:hover {
-  color: #74a7cb;
-  text-shadow: none;
-  border: none; }
+.reveal a:hover {}
 
 .reveal .roll span:after {
   color: #fff;

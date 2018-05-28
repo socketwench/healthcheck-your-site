@@ -27,11 +27,13 @@
 				<section>
           <h1>Dr. Upal<br>Is In:</h1>
           <h2>Healthcheck your site!</h2>
+          <p>&nbsp;</p>
+          <small>use &larr;&uarr;&darr;&rarr; or &lt;SPACE&gt;</small>
         </section>
 
         <section>
           <h2>"Where's the links?"</h2>
-          <p>socketwench.github.io/healthcheck-your-site</p>
+          <p><a href="https://socketwench.github.io/healthcheck-your-site/#/">socketwench.github.io/healthcheck-your-site</a></p>
         </section>
 
         <section>
@@ -68,11 +70,32 @@
             <p class="fragment">...until it isn't.</p>
           </section>
           <section>
+            <h2>Reasons to audit</h2>
+            <p class="fragment">Errors, breakage, malicious content</p>
+            <p class="fragment">Poor performance</p>
+            <p class="fragment">"It's your site now."</p>
+          </section>
+          <!--
+            COMIC
+            I have a bad feeling about this...
+          -->
+          <section>
             <h2>A feeling isn't an audit</h2>
+            <p class="fragment">...but a feeling is a sign you need one.</p>
+          </section>
+          <!--
+            COMIC
+            Why so negative?
+            Isn't there anything good?
+          -->
+          <section>
+            <h2>Smoke testing</h2>
+            <p class="fragment">Check if you're on the right path</p>
+            <p class="fragment">Can be difficult to check in-house</p>
           </section>
           <section>
             <h2>Your experience is not universal</h2>
-            <p>Anonymous survey, external agency</p>
+            <p class="fragment">Anonymous survey, external agency</p>
           </section>
         </section>
 
@@ -218,29 +241,29 @@
           -->
           <section>
             <h2>Best Practice Checks</h2>
-            <p>Read them all!</p>
-            <p>Highest value checks in the whole report</p>
+            <p class="fragment">Read them all!</p>
+            <p class="fragment">Highest value checks in the whole report</p>
           </section>
           <section>
             <h2>services.yml warning</h2>
-            <p>Techincally correct, but...</p>
-            <p>...core's own services.yml is preferred.</p>
-            <small><a href="https://www.drupal.org/project/drupal/issues/2547447">drupal.org/project/drupal/issues/2547447</a></small>
+            <p class="fragment">Techincally correct, but...</p>
+            <p class="fragment">...core's own services.yml is preferred.</p>
+            <small class="fragment"><a href="https://www.drupal.org/project/drupal/issues/2547447">drupal.org/project/drupal/issues/2547447</a></small>
           </section>
           <section>
             <h2>Caching Settings</h2>
-            <p>Best performance value for small sites</p>
-            <p>Consider cache minimum lifetime carefully!</p>
+            <p class="fragment">Best performance value for small sites</p>
+            <p class="fragment">Consider cache minimum lifetime carefully!</p>
           </section>
           <section>
             <h2>Content checks</h2>
-            <p>More FYI than problem-finding</p>
-            <p>Does not replace a content audit</p>
+            <p class="fragment">More FYI than problem-finding</p>
+            <p class="fragment">Does not replace a content audit</p>
           </section>
           <section>
             <h2>Technical stats</h2>
-            <p>File, code, DB sizes</p>
-            <p>Sometimes useful! Depends on your site.</p>
+            <p class="fragment">File, code, DB sizes</p>
+            <p class="fragment">Sometimes useful! Depends on your site.</p>
           </section>
           <!--
             COMIC
@@ -248,18 +271,18 @@
           -->
           <section>
             <h2>Status and Updates</h2>
-            <p>Same as Update Manager and Status Report</p>
-            <p>Replaces manual steps, no login needed!</p>
+            <p class="fragment">Same as Update Manager and Status Report</p>
+            <p class="fragment">Replaces manual steps, no login needed!</p>
           </section>
           <section>
             <h2>PHP code analysis</h2>
-            <p>Code smells, copy-pasting, mess detection</p>
-            <p>Requires additional composer-installed utilites</p>
+            <p class="fragment">Code smells, copy-pasting, mess detection</p>
+            <p class="fragment">Requires additional composer-installed utilites</p>
           </section>
           <section>
             <h2>Even more things</h2>
-            <p>Site Audit is extensible!</p>
-            <p>Reports differ slightly between D7 & D8</p>
+            <p class="fragment">Site Audit is extensible!</p>
+            <p class="fragment">Reports differ slightly between D7 & D8</p>
           </section>
         </section>
 
@@ -285,25 +308,55 @@
           </section>
           <section>
             <h2>"Updating" PHP</h2>
-            <p>Actual updates are rare</p>
-            <p>Better to move to new server/hosting</p>
+            <p class="fragment">Actual updates are rare</p>
+            <p class="fragment">Better to move to new server/hosting</p>
           </section>
           <section>
             <h2>CLI vs. Web PHP</h2>
-            <p>Can be different, creates drush problems</p>
-            <p>PHP version should be the same</p>
-            <p>Configuration should be as close as possible!</p>
+            <p class="fragment">Can be different, creates drush problems</p>
+            <p class="fragment">PHP version should be the same</p>
+            <p class="fragment">Configuration should be as close as possible!</p>
           </section>
           <section>
             <h2>Database server</h2>
-            <p>Same or separate server, latency is the key!</p>
-            <p>Common problem for shared hosts</p>
+            <p class="fragment">Same or separate server, latency is the key!</p>
+            <p class="fragment">Common problem for shared hosts</p>
           </section>
         </section>
 
         <section>
+          <!--
+            COMIC
+            But a site is more than just tech.
+            It's also people.
+          -->
           <section>
-            <h1>Workflow checkups</h1>
+            <h1>Workflow & Content</h1>
+          </section>
+          <section>
+            <h2>How is your site used?</h2>
+            <p class="fragment">How you think it works...</p>
+            <p class="fragment">...and how it actually works isn't same.</p>
+          </section>
+          <section>
+            <h2>Inverview steakholders</h2>
+            <p class="fragment">Record their goals and expectations</p>
+            <p class="fragment">Avoid technical process questions</p>
+          </section>
+          <section>
+            <h2>Talk to content editors</h2>
+            <p class="fragment">Discuss process and painpoints</p>
+            <p class="fragment">Do <strong>not</strong> include management</p>
+          </section>
+          <section>
+            <h2>"It's wierd but it works."</h2>
+            <p class="fragment">Identifies in-house workarounds</p>
+            <p class="fragment">Indicates deeper problem, or implementation gap</p>
+          </section>
+          <section>
+            <h2>Bring in a 3rd party</h2>
+            <p class="fragment">Reduces social pressure</p>
+            <p class="fragment">Outside perspective valuable</p>
           </section>
         </section>
 
@@ -329,8 +382,8 @@
           </section>
           <section>
             <h2>Installation</h2>
-            <pre><code class="shell">composer require drupal/hacked</code></pre>
-            <pre><code class="shell">drush en -y hacked</code></pre>
+            <p><code class="shell">composer require drupal/hacked</code></p>
+            <p><code class="shell">drush en -y hacked</code></p>
           </section>
           <section>
             <h2>Running the report</h2>
@@ -346,7 +399,7 @@
           </section>
           <section>
             <h2>Getting detailed results</h2>
-            <p class="fragment">Install the <code>diff</code> module</p>
+            <p class="fragment">Install the <a href="https://www.drupal.org/project/diff">diff</a> module</p>
             <p class="fragment">Displays individual line changes</p>
           </section>
           <section>
@@ -361,20 +414,358 @@
         </section>
 
         <section>
+          <!--
+            COMIC
+            Did we hack our modules?
+            Or have we been hacked?
+          -->
           <section>
             <h1>Spotting a hack</h1>
+          </section>
+          <section>
+            <h2>Signatures</h2>
+            <p class="fragment">Clues that imply a hack</p>
+          </section>
+          <section>
+            <h2>eval() + base64_decode()</h2>
+            <p class="fragment">Common way to unpack, execute exploit code</p>
+          </section>
+          <section>
+            <h2>Checking logs</h2>
+            <p class="fragment">Look for PHP errors, odd 404s</p>
+            <p class="fragment">May be subtle or buried</p>
+          </section>
+          <section>
+            <h2>"Wildlife"</h2>
+            <p class="fragment">The 'net isn't a clean place!</p>
+            <p class="fragment">Frequent drive-by attacks are <strong>common</strong></p>
+          </section>
+          <section>
+            <h2>2018 Drupalgeddons</h2>
+            <p class="fragment">Can leave no signature!</p>
+            <p class="fragment">Not patched on patch day? Assume you're hacked.</p>
+          </section>
+        </section>
+
+        <!--
+          COMIC
+          That's sure a lot of data...
+          What do I *do* with it!?
+        -->
+
+        <section>
+          <section>
+            <h1>Recovering from a hack</h1>
+          </section>
+          <section>
+            <h2>DON'T PANIC.</h2>
+          </section>
+          <section>
+            <h2>Take the site offline</h2>
+            <p class="fragment">Better to be offline than compromised</p>
+            <p class="fragment">User privacy, partner exposure, brand damage</p>
+          </section>
+          <section>
+            <h2>Backup the hacked site</h2>
+            <p class="fragment">You need a working copy to examine</p>
+            <p class="fragment">Place it in an air-gapped system</p>
+          </section>
+          <section>
+            <h2>When were you hacked?</h2>
+            <p class="fragment">Requires some sleuthing</p>
+            <p class="fragment">Tie to module or core security release</p>
+          </section>
+          <section>
+            <h2>Find a clean backup</h2>
+            <p class="fragment">DB and files from before the hack</p>
+            <p class="fragment">Be sure it isn't compromised!</p>
+          </section>
+          <section>
+            <h2>Update the clean backup</h2>
+            <p class="fragment">Apply all security updates and patches</p>
+            <p class="fragment">Copy content over manually</p>
+          </section>
+          <section>
+            <h2>Back it up again</h2>
+            <p class="fragment">Avoid rebuilding a second time</p>
+            <p class="fragment">Site may still be exposed in other ways</p>
+          </section>
+          <!--
+            COMIC
+            What if they got shell access?
+          -->
+          <section>
+            <h2>Throw away and rebuild</h2>
+            <p class="fragment">Really. Assume it's comprimised</p>
+            <p class="fragment">Invalidate all passwords and start over</p>
+          </section>
+          <!--
+            COMIC
+            It's really painful,
+            but it's necessary.
+          -->
+          <section>
+            <h2>You will be hacked</h2>
+            <p class="fragment">...but you can be prepared.</p>
           </section>
         </section>
 
         <section>
           <section>
-            <h1>Recovering from a hack</h1>
+            <h1>Resolving audit findings</h1>
+          </section>
+          <section>
+            <h2>Statistics module</h2>
+            <p class="fragment">Does a DB write on each request!</p>
+            <p class="fragment">Rarely needed, as other analyics are used</p>
+          </section>
+          <section>
+            <h2>PHP Module</h2>
+            <p class="fragment">Executes PHP code in content</p>
+            <p class="fragment">Instant security vulnerability!</p>
+          </section>
+          <section>
+            <h2>Uninstalling PHP module</h2>
+            <p class="fragment">Check text-formats, use of Views PHP Filter first!</p>
+            <p class="fragment">Test for breakage, then uninstall.</p>
+          </section>
+          <section>
+            <h2>Lots of revisions</h2>
+            <p class="fragment">Slows down content retrival</p>
+            <p class="fragment">Revisions past the last 3 are low value</p>
+          </section>
+          <section>
+            <h2>Opt-in Revisions</h2>
+            <p class="fragment">Disable automatic revisions by type</p>
+            <p class="fragment">Doesn't clean out existing, old revisions</p>
+          </section>
+          <section>
+            <h2><a href="https://www.drupal.org/project/node_revision_delete">Node Revision Delete</a></h2>
+            <p class="fragment">Limits # of revisions by type</p>
+            <p class="fragment">Cleans out old revisions</p>
+          </section>
+          <section>
+            <h2>Watchdog too big</h2>
+            <p class="fragment">dblog module can be slow</p>
+            <p class="fragment">Ease of use might be worth it</p>
+          </section>
+          <section>
+            <h2>Syslog module</h2>
+            <p class="fragment">Write to web server syslog instead of DB</p>
+            <p class="fragment">Faster, requires more Ops coordination</p>
+          </section>
+          <section>
+            <h2>Duplicate modules</h2>
+            <p class="fragment">Confusing, causes missed updates</p>
+            <p class="fragment">Can be sign of a hack</p>
+          </section>
+          <section>
+            <h2>Which module to remove?</h2>
+            <p class="fragment"><code>system</code> table, <code>filename</code> column</p>
+            <p class="fragment">Remove other copies</p>
+          </section>
+          <section>
+            <h2>De-duping modules</h2>
+            <p class="fragment">Remove, <code>drush cr && drush updb</code></p>
+            <p class="fragment">Test locally first!</p>
+          </section>
+          <section>
+            <h2>Messy docroot</h2>
+            <p class="fragment">Can create automation, composer problems</p>
+            <p class="fragment">Move to files directory, use .htaccess redirect</p>
+          </section>
+          <section>
+            <h2>Caching</h2>
+            <p class="fragment">Enable for all sites!</p>
+            <p class="fragment">...except when using Varnish, etc.</p>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h1>Performance problems</h1>
+          </section>
+          <section>
+            <h2>Audit != Performance Analysis</h2>
+            <p class="fragment">Different tools, approaches</p>
+            <p class="fragment">Time and brain intensive process</p>
+          </section>
+          <section>
+            <h2>Fix the easy things first</h2>
+            <p class="fragment">You might get "good enough" speed</p>
+          </section>
+          <section>
+            <h2>Where are you slow?</h2>
+            <p class="fragment">Certain pages?</p>
+            <p class="fragment">Certain servers?</p>
+            <p class="fragment">Everywhere!?</p>
+          </section>
+          <section>
+            <h2>Web profiler</h2>
+            <p class="fragment">Part of dev module</p>
+            <p class="fragment">Times major parts of processing</p>
+          </section>
+          <section>
+            <h2>Slow DB vs. PHP</h2>
+            <p class="fragment">Code can fixed</p>
+            <p class="fragment">Slow DBs require hosting change</p>
+          </section>
+          <section>
+            <!-- fukaku, motto fukaku. -->
+            <h2>Going deeper</h2>
+            <p class="fragment">Finding PHP bottlenecks</p>
+          </section>
+          <section>
+            <h2>Block Profiler</h2>
+            <p class="fragment">Times Drupal 7 block rendering</p>
+            <p class="fragment"><a href="https://www.drupal.org/sandbox/lesmana/2512518">drupal.org/sandbox/lesmana/2512518</a></p>
+          </section>
+          <section>
+            <h2>XDebug Profiler</h2>
+            <p class="fragment">In-depth, PHP profiler</p>
+            <p class="fragment">Complex set up, should not be run on live</p>
+          </section>
+          <section>
+            <h2>Use in Flight Deck</h2>
+            <p class="fragment">Docker-based local environment</p>
+            <p class="fragment">Includes XDebug profiles and Webgrind</p>
+          </section>
+          <section>
+            <h2>Getting Flight Deck</h2>
+            <p class="fragment"><a href="https://github.com/ten7/flight-deck">github.com/ten7/flight-deck</a></p>
+            <p class="fragment"><a href="http://flight-deck.readthedocs.io/en/latest/gettingStarted/">flight-deck.readthedocs.io/en/latest/gettingStarted/</a></p>
+          </section>
+        </section>
+
+        <section>
+          <!--
+            COMIC
+            We cleaned out all the hacks,
+            and turned off all the bad stuff.
+            The site should be screaming fast!
+            .
+            .
+            .
+            UGH! Now what's wrong!?
+          -->
+          <section>
+            <h1>Mistakes were made</h1>
+          </section>
+          <section>
+            <h2>It's not broken...</h2>
+            <p class="fragment">...but it's not working either.</p>
+          </section>
+          <section>
+            <h2>Too few content types</h2>
+            <p class="fragment">Articles and Basic Pages everywhere</p>
+            <p class="fragment">Tons of fields, not all used</p>
+          </section>
+          <section>
+            <h2>Too many content types</h2>
+            <p class="fragment">Differentiation only in name, not use or data</p>
+            <p class="fragment">Press Release vs. Blog vs. News</p>
+          </section>
+          <!--
+            COMIC
+            Content problems are really common,
+            but not too hard to fix!
+          -->
+          <section>
+            <h2>Do a content audit</h2>
+            <p class="fragment">Inventory of all types and content</p>
+          </section>
+          <section>
+            <h2>Rethink Content Stategy</h2>
+            <p class="fragment">Drop old, irrelvent content</p>
+            <p class="fragment">Use card sorting to rediscover groupings</p>
+          </section>
+          <section>
+            <h2>Merge, split types</h2>
+            <p class="fragment">Can be done manually or using Migrate</p>
+            <p class="fragment">Per-node taks via Views Bulk Operations</p>
+          </section>
+          <section>
+            <h2>Reorganize</h2>
+            <p class="fragment">Update menus, build new sections</p>
+            <p class="fragment">Use Pathauto and Redirect to keep SEO</p>
+          </section>
+          <!--
+            COMIC
+            Why is the body field so big!?
+            Why are so many tags allowed?
+            FULL HTML!?
+          -->
+          <section>
+            <h2>Layout is not content</h2>
+            <p class="fragment">Gives site messy, inconsistent feel</p>
+          </section>
+          <section>
+            <h2>Layout managers</h2>
+            <p class="fragment">Separates content from layout</p>
+            <p class="fragment">
+              <a href="https://www.drupal.org/project/paragraphs">Paragraphs</a>,
+              <a href="https://www.drupal.org/project/panels">Panels</a>,
+              <a href="https://www.drupal.org/project/block_visibility_groups">Block Visibilty Groups</a>
+            </p>
+          </section>
+          <!--
+            COMIC
+            The problem is deeper than just Content.
+          -->
+          <section>
+            <h2>Custom implementions</h2>
+            <p class="fragment">Contrib available, but wasn't used</p>
+            <p class="fragment">Misses security reviews, bug fixes</p>
+          </section>
+          <section>
+            <h2>Overuse, abuse of a feature</h2>
+            <p class="fragment">Causes gradual performance loss</p>
+            <p class="fragment">Often unaware, or unintentional</p>
+          </section>
+          <section>
+            <h2>Can it be changed?</h2>
+            <p class="fragment">Isolated features easier to replace</p>
+            <p class="fragment">Accept or deprecate core features</p>
+          </section>
+          <section>
+            <h2>Look to the long term</h2>
+            <p class="fragment">Fast fixes bring brief benfit</p>
+          </section>
+        </section>
+
+        <!--
+          COMIC
+          The results are in.
+          You have everything.
+          Even the really icky things.
+        -->
+        <section>
+          <section>
+            <h1>Time for a new site?</h1>
+          </section>
+          <section>
+            <h2>When to rebuild</h2>
+            <p class="fragment">Current site code unsupported</p>
+            <p class="fragment">Cheaper, easier to rebuild than fix</p>
+            <p class="fragment">"It's time for it."</p>
+          </section>
+          <section>
+            <h2>Rebuilds easier on staff</h2>
+            <p class="fragment">"Rip the bandage off" approach</p>
+          </section>
+          <section>
+            <h2>Hosting change</h2>
+            <p class="fragment">Create new live environment</p>
+            <p class="fragment">Update domain IP at launch</p>
           </section>
         </section>
 
         <section>
           <section>
             <h1>When to ask for help</h1>
+          </section>
+          <section>
+            <h2></h2>
           </section>
         </section>
 
