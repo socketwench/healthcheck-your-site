@@ -499,8 +499,8 @@ Load average: 0.70 0.87 0.92 4/1173 264
           </section>
           <section data-transition="none" data-background-transition="none" data-background="images/whatAboutCliPhp2.png" data-background-size="contain">
             <h2>Checking Web PHP</h2>
-            <p>Best done through the web UI</p>
-            <p><strong>Admin > Reports > Status</strong></p>
+            <p class="fragment">Best done through the web UI</p>
+            <p class="fragment"><strong>Admin > Reports > Status</strong></p>
           </section>
           <section>
             <pre><code>$ php --version</code></pre>
@@ -538,7 +538,7 @@ with Xdebug v2.5.0, Copyright (c) 2002-2016, by Derick Rethans</code></pre>
           -->
         </section>
 
-        <section>
+        <!-- <section>
           <section>
             <h1>Workflow & Content</h1>
           </section>
@@ -567,15 +567,70 @@ with Xdebug v2.5.0, Copyright (c) 2002-2016, by Derick Rethans</code></pre>
             <p class="fragment">Reduces social pressure</p>
             <p class="fragment">Outside perspective valuable</p>
           </section>
-        </section>
+        </section> -->
 
         <section>
+          <section data-transition="none">
+            <img src="images/dontHackCore1.png" />
+          </section>
+          <section data-transition="none">
+            <img src="images/dontHackCore2.png" />
+          </section>
+          <section data-transition="none">
+            <img src="images/dontHackCore3.png" />
+          </section>
+          <section data-transition="none">
+            <img src="images/dontHackCore4.png" />
+          </section>
           <section>
-            <h1>Using Hacked module</h1>
+            <h1>Auditing modded code</h1>
+          </section>
+          <section>
+            <h2>Mods aren't "hacks"</h2>
+            <p class="fragment">Not malicious!</p>
+            <p class="fragment">Intentional modification of core & contrib code</p>
+          </section>
+          <section>
+            <h2>Why mod?</h2>
+            <p class="fragment">Expediency, lack of knowledge</p>
+            <p class="fragment">Unaware of "offical" patching process</p>
+          </section>
+          <section>
+            <h2>Patch, don't mod</h2>
+            <p class="fragment">Post issue & patch if broad benefit...</p>
+            <p class="fragment">...or at least keep <code>*.patch</code> file in repo.</p>
+          </section>
+          <section>
+            <h2>Right way to patch</h2>
+            <p class="fragment">Use <a href="https://github.com/cweagans/composer-patches">cweagans/composer-patches</a></p>
+            <p class="fragment">Refer to the patch on D.O if posted</p>
+          </section>
+          <section data-transition="none">
+            <img src="images/dontKnowIfModded1.png" />
+          </section>
+          <section data-transition="none">
+            <img src="images/dontKnowIfModded2.png" />
+          </section>
+          <section data-transition="none">
+            <img src="images/dontKnowIfModded3.png" />
+          </section>
+          <section data-transition="none">
+            <img src="images/dontKnowIfModded4.png" />
+          </section>
+          <section data-transition="none">
+            <img src="images/dontKnowIfModded5.png" />
+          </section>
+          <section data-transition="none">
+            <img src="images/dontKnowIfModded6.png" />
+          </section>
+          <section>
+            <h2><a href="https://www.drupal.org/project/hacked">Hacked! module</a></h2>
+            <p class="fragment">Compares installed core & contrib against D.O</p>
+            <p class="fragment">Version aware</p>
           </section>
           <section>
             <h2>When to use</h2>
-            <p class="fragment">Your use ftp (not git or CI) to deploy</p>
+            <p class="fragment">You use ftp (not git or CI) to deploy</p>
             <p class="fragment">You haven't updated in ages</p>
             <p class="fragment">You suspect a breach</p>
           </section>
@@ -585,14 +640,14 @@ with Xdebug v2.5.0, Copyright (c) 2002-2016, by Derick Rethans</code></pre>
             <p class="fragment">Bad practice core or module modification</p>
           </section>
           <section>
+            <h2>Installation</h2>
+            <p class="fragment"><code class="shell">composer require drupal/hacked</code></p>
+            <p class="fragment"><code class="shell">drush en -y hacked</code></p>
+          </section>
+          <section>
             <h2>Run against Live</h2>
             <p class="fragment">Results can differ with your local</p>
             <p class="fragment">Module can be removed after use</p>
-          </section>
-          <section>
-            <h2>Installation</h2>
-            <p><code class="shell">composer require drupal/hacked</code></p>
-            <p><code class="shell">drush en -y hacked</code></p>
           </section>
           <section>
             <h2>Running the report</h2>
@@ -620,14 +675,42 @@ with Xdebug v2.5.0, Copyright (c) 2002-2016, by Derick Rethans</code></pre>
           <section>
             <img src="images/docker.test_admin_reports_hacked_flag_diff3.png" />
           </section>
+          <section>
+            <h2>Going Legit</h2>
+            <p class="fragment">Extract patch from changes</p>
+            <p class="fragment">Post to D.O, add to repo</p>
+          </section>
+          <section>
+            <h2>Modding isn't wrong</h2>
+            <p class="fragment">...but it needs to be done right</p>
+          </section>
         </section>
 
         <section>
-          <!--
-            COMIC
-            Did we hack our modules?
-            Or have we been hacked?
-          -->
+          <section data-transition="none">
+            <img src="images/haveIBeenHacked1.png" />
+          </section>
+          <section data-transition="none">
+            <img src="images/haveIBeenHacked2.png" />
+          </section>
+          <section data-transition="none">
+            <img src="images/haveIBeenHacked3.png" />
+          </section>
+          <section data-transition="none">
+            <img src="images/haveIBeenHacked4.png" />
+          </section>
+          <section data-transition="none">
+            <img src="images/haveIBeenHacked5.png" />
+          </section>
+          <section data-transition="none">
+            <img src="images/haveIBeenHacked6.png" />
+          </section>
+          <section data-transition="none">
+            <img src="images/haveIBeenHacked7.png" />
+          </section>
+          <section data-transition="none">
+            <img src="images/haveIBeenHacked8.png" />
+          </section>
           <section>
             <h1>Spotting a hack</h1>
           </section>
@@ -654,18 +737,11 @@ with Xdebug v2.5.0, Copyright (c) 2002-2016, by Derick Rethans</code></pre>
             <p class="fragment">Can leave no signature!</p>
             <p class="fragment">Not patched on patch day? Assume you're hacked.</p>
           </section>
-        </section>
-
-        <!--
-          COMIC
-          That's sure a lot of data...
-          What do I *do* with it!?
-        -->
-
-        <section>
-          <section>
-            <h1>Recovering from a hack</h1>
-          </section>
+          <!--
+            COMIC
+            That's sure a lot of data...
+            What do I *do* with it!?
+          -->
           <section>
             <h2>DON'T PANIC.</h2>
           </section>
@@ -721,7 +797,7 @@ with Xdebug v2.5.0, Copyright (c) 2002-2016, by Derick Rethans</code></pre>
 
         <section>
           <section>
-            <h1>Resolving audit findings</h1>
+            <h1>Remediation</h1>
           </section>
           <section>
             <h2>Statistics module</h2>
