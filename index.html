@@ -398,46 +398,147 @@
           <section>
             <h1>Infrastructure checkups</h1>
           </section>
+          <!--
+            COMIC
+            Still on fire, huh?
+          -->
           <section>
             <h2>Where're you hosted?</h2>
             <p class="fragment">Shared hosting</p>
             <p class="fragment">Managed hosting (Pantheon, Acquia)</p>
-            <p class="fragment">Self-managed (VPS)</p>
+            <p class="fragment">Self-managed (VPS, internal)</p>
           </section>
           <section>
             <h2>Still happy with it?</h2>
             <p class="fragment">What was your primary motive?</p>
             <p class="fragment">Is that still true?</p>
           </section>
+          <!--
+            COMIC
+            I'm not a Linux master...
+            Is there anything I can check?
+          -->
+          <section>
+            <h2>Enough memory?</h2>
+            <p class="fragment"><code>free</code> utility</p>
+            <p class="fragment">Shows used, free, and available memory</p>
+          </section>
+          <section>
+            <pre class="shell"><code>$ free -h</code></pre>
+<pre class="shell fragment"><code>        total    used    free   shared  buff/cache   available
+Mem:     15Gi   3.8Gi   4.1Gi    1.7Gi       7.7Gi         9Gi
+Swap:    31Gi    77Mi   31Gi</code></pre>
+            <small class="fragment">(Scroll right)</small>
+          </section>
+          <section>
+            <h2>What about disk?</h2>
+            <p class="fragment"><code>df</code> or "disk free" utility</p>
+            <p class="fragment">Free space, not performance</p>
+          </section>
+          <section>
+            <pre><code class="shell">$ df -h</code></pre>
+<pre class="fragment"><code class="shell">Filesystem      Size  Used Avail Use% Mounted on
+dev             7.8G     0  7.8G   0% /dev
+run             7.8G  1.9M  7.8G   1% /run
+/dev/nvme0n1p3  434G  142G  270G  35% /
+/dev/nvme0n1p1  599M   42M  558M   7% /boot</code></pre>
+          </section>
+          <section>
+            <h2>Disk mounts</h2>
+            <p class="fragment">Site shouldn't cross devices</p>
+            <p class="fragment">Adds performance hit, deployment complexity</p>
+          </section>
+          <section>
+            <h2>CPU load</h2>
+            <p class="fragment"><code>top</code> utility</p>
+            <p class="fragment">Look for <code>idle</code> or <code>id</code> percent</p>
+          </section>
+          <section>
+            <pre><code>Mem: 12541644K used, 3767604K free, 1816292K shrd, 965248K buff, 6908000K cache
+CPU:   1% usr   0% sys   0% nic  96% idle   0% io   0% irq   0% sirq
+Load average: 0.70 0.87 0.92 4/1173 264
+  PID  PPID USER     STAT   VSZ %VSZ CPU %CPU COMMAND
+   29     1 apache   S     373m   2%   1   0% /usr/sbin/httpd -D FOREGROUND -f /
+   30     1 apache   S     368m   2%   3   0% /usr/sbin/httpd -D FOREGROUND -f /
+   33     1 apache   S     368m   2%   2   0% /usr/sbin/httpd -D FOREGROUND -f /
+   32     1 apache   S     368m   2%   0   0% /usr/sbin/httpd -D FOREGROUND -f /
+  139     1 apache   S     368m   2%   2   0% /usr/sbin/httpd -D FOREGROUND -f /
+    1     0 apache   S     368m   2%   0   0% /usr/sbin/httpd -D FOREGROUND -f /
+   42     0 apache   S     6244   0%   1   0% /bin/bash
+  263    42 apache   R     1532   0%   0   0% top</code></pre>
+          </section>
+          <section data-transition="none" data-background-transition="none" data-background="images/sharedSelfHostedNeedsAudit1.png" data-background-size="contain">
+            <h2>Managed Hosting</h2>
+            <p class="fragment">Typically do not need auditing</p>
+            <p class="fragment">Memory, disk, CPU typically auto-scaled</p>
+          </section>
+          <section data-transition="none" data-background-transition="none" data-background="images/sharedSelfHostedNeedsAudit2.png" data-background-size="contain">
+            <h2>Managed Hosting</h2>
+            <p>Typically do not need auditing</p>
+            <p>Memory, disk, CPU typically auto-scaled</p>
+          </section>
           <section>
             <h2>PHP Version</h2>
-            <p class="fragment">D8 should always be on PHP 7.</p>
+            <p class="fragment">D8 should always be on PHP 7!</p>
             <p class="fragment">For D7, try PHP 7, otherwise PHP 5.6</p>
           </section>
           <section>
             <h2>"Updating" PHP</h2>
-            <p class="fragment">Actual updates are rare</p>
+            <p class="fragment">Actual 5.x to 7.x updates are rare</p>
             <p class="fragment">Better to move to new server/hosting</p>
           </section>
           <section>
             <h2>CLI vs. Web PHP</h2>
-            <p class="fragment">Can be different, creates drush problems</p>
-            <p class="fragment">PHP version should be the same</p>
-            <p class="fragment">Configuration should be as close as possible!</p>
+            <p class="fragment">PHP version should always match</p>
+            <p class="fragment">Configuration may differ, but only minor</p>
+          </section>
+          <section data-transition="none" data-background-transition="none" data-background="images/whatAboutCliPhp1.png" data-background-size="contain">
+            <h2>Checking Web PHP</h2>
+            <p class="fragment">Best done through the web UI</p>
+            <p class="fragment"><strong>Admin > Reports > Status</strong></p>
+          </section>
+          <section data-transition="none" data-background-transition="none" data-background="images/whatAboutCliPhp2.png" data-background-size="contain">
+            <h2>Checking Web PHP</h2>
+            <p>Best done through the web UI</p>
+            <p><strong>Admin > Reports > Status</strong></p>
           </section>
           <section>
+            <pre><code>$ php --version</code></pre>
+<pre class="fragment"><code>PHP 5.6.33 (cli) (built: Feb  7 2018 15:35:50)
+Copyright (c) 1997-2016 The PHP Group
+Zend Engine v2.6.0, Copyright (c) 1998-2016 Zend Technologies
+with Zend OPcache v7.0.6-dev, Copyright (c) 1999-2016, by Zend Technologies
+with Xdebug v2.5.0, Copyright (c) 2002-2016, by Derick Rethans</code></pre>
+            </section>
+          <section>
             <h2>Database server</h2>
-            <p class="fragment">Same or separate server, latency is the key!</p>
+            <p class="fragment">Same or separate, <em>latency</em> is the key!</p>
             <p class="fragment">Common problem for shared hosts</p>
           </section>
-        </section>
-
-        <section>
+          <section>
+            <h2>Measuring latency</h2>
+            <p class="fragment"><code>ping</code> utility</p>
+            <p class="fragment">From web server, <code>ping</code> DB server</p>
+          </section>
+          <section>
+            <pre><code>$ ping 192.168.1.10</code></pre>
+            <pre class="fragment"><code>PING 192.168.1.10 (192.168.1.10) 56(84) bytes of data.
+64 bytes from 192.168.1.10: icmp_seq=1 ttl=63 time=0.378 ms
+64 bytes from 192.168.1.10: icmp_seq=2 ttl=63 time=0.473 ms</code></pre>
+            <small class="fragment">(Use Ctrl-C to exit)</small>
+          </section>
+          <section>
+            <h2>As your site grows...</h2>
+            <p class="fragment">...you can outgrow your hosting.</p>
+          </section>
           <!--
             COMIC
             But a site is more than just tech.
             It's also people.
           -->
+        </section>
+
+        <section>
           <section>
             <h1>Workflow & Content</h1>
           </section>
