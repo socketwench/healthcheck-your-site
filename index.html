@@ -63,6 +63,12 @@
           <section>
             <h1>"But my site is fine!"</h1>
           </section>
+          <!--
+            This doesn't really sell the idea of an audit all that well.
+            Most site stakeholders either don't think their site needs
+            an audit, or think they are too invasive and embarassing.
+            They'd rather wait until something actually breaks.
+          -->
           <section>
             <h2>Every site is healthy</h2>
             <p class="fragment">...until it isn't.</p>
@@ -125,9 +131,16 @@
             <p class="fragment">Can be difficult to check in-house</p>
             <p>&nbsp;</p>
           </section>
+          <!--
+            What benefit does an audit provide if bad things are found?
+          -->
           <section>
             <h2>Your experience is not universal</h2>
             <p class="fragment">Anonymous survey, external agency</p>
+          </section>
+          <section>
+            <h2>It's better to know and plan</h2>
+            <p class="fragment">...than just hope for the best.</p>
           </section>
         </section>
 
@@ -494,12 +507,12 @@ Load average: 0.70 0.87 0.92 4/1173 264
           <section data-transition="none" data-background-transition="none" data-background="images/whatAboutCliPhp1.png" data-background-size="contain">
             <h2>Checking Web PHP</h2>
             <p class="fragment">Best done through the web UI</p>
-            <p class="fragment"><strong>Admin > Reports > Status</strong></p>
+            <p class="fragment">Admin > Reports > Status</p>
           </section>
           <section data-transition="none" data-background-transition="none" data-background="images/whatAboutCliPhp2.png" data-background-size="contain">
             <h2>Checking Web PHP</h2>
             <p>Best done through the web UI</p>
-            <p><strong>Admin > Reports > Status</strong></p>
+            <p>Admin > Reports > Status</p>
           </section>
           <section>
             <pre><code>$ php --version</code></pre>
@@ -518,6 +531,10 @@ with Xdebug v2.5.0, Copyright (c) 2002-2016, by Derick Rethans</code></pre>
             <h2>Measuring latency</h2>
             <p class="fragment"><code>ping</code> utility</p>
             <p class="fragment">From web server, <code>ping</code> DB server</p>
+          </section>
+          <section>
+            <h2>Ping measures the network</h2>
+            <p class="fragment">not DB responsivness!</p>
           </section>
           <section>
             <pre><code>$ ping 192.168.1.10</code></pre>
@@ -686,6 +703,11 @@ with Xdebug v2.5.0, Copyright (c) 2002-2016, by Derick Rethans</code></pre>
             <p class="fragment">Common way to unpack, execute exploit code</p>
           </section>
           <section>
+            <h2>Scanning code for Hacks</h2>
+            <p class="fragment">Hacked! report, <code>grep</code> utility</p>
+            <p class="fragment">Look for duplicate files & modules</p>
+          </section>
+          <section>
             <h2>Checking logs</h2>
             <p class="fragment">Look for PHP errors, odd 404s</p>
             <p class="fragment">May be subtle or buried</p>
@@ -767,10 +789,17 @@ with Xdebug v2.5.0, Copyright (c) 2002-2016, by Derick Rethans</code></pre>
           <section data-transition="none">
             <img src="images/serverCompromised3.png" />
           </section>
-          <section>
+          <section data-transition="none" data-background-transition="none" data-background="images/itHurts1.png" data-background-size="contain">
             <h2>Throw away and rebuild</h2>
-            <p class="fragment">Really. Assume it's comprimised</p>
+            <p class="fragment">Really. <span class="fragment">Assume it's comprimised.</span></p>
             <p class="fragment">Invalidate all passwords and start over</p>
+            <p>&nbsp;</p>
+          </section>
+          <section data-transition="none" data-background-transition="none" data-background="images/itHurts2.png" data-background-size="contain">
+            <h2>Throw away and rebuild</h2>
+            <p>Really. <span>Assume it's comprimised.</span></p>
+            <p>Invalidate all passwords and start over</p>
+            <p>&nbsp;</p>
           </section>
           <section>
             <h2>You will be hacked</h2>
@@ -799,10 +828,20 @@ with Xdebug v2.5.0, Copyright (c) 2002-2016, by Derick Rethans</code></pre>
             <p class="fragment">Restore to a clean state, then...</p>
             <p class="fragment">...apply all security updates.</p>
           </section>
-          <section>
+          <section data-transition="none" data-background-transition="none" data-background="images/theyreSmallChanges1.png" data-background-size="contain">
             <h2>Then, fix all the easy stuff</h2>
             <p class="fragment">Disable bad-practice modules</p>
             <p class="fragment">Best practice config changes</p>
+          </section>
+          <section data-transition="none" data-background-transition="none" data-background="images/theyreSmallChanges2.png" data-background-size="contain">
+            <h2>Then, fix all the easy stuff</h2>
+            <p>Disable bad-practice modules</p>
+            <p>Best practice config changes</p>
+          </section>
+          <section data-transition="none" data-background-transition="none" data-background="images/theyreSmallChanges3.png" data-background-size="contain">
+            <h2>Then, fix all the easy stuff</h2>
+            <p>Disable bad-practice modules</p>
+            <p>Best practice config changes</p>
           </section>
           <section>
             <h2>Statistics module</h2>
@@ -816,7 +855,7 @@ with Xdebug v2.5.0, Copyright (c) 2002-2016, by Derick Rethans</code></pre>
           </section>
           <section>
             <h2>Uninstalling PHP module</h2>
-            <p class="fragment">Check text-formats, use of Views PHP Filter first!</p>
+            <p class="fragment">Check text-formats, use of <a href="https://www.drupal.org/project/views_php">Views PHP</a> first!</p>
             <p class="fragment">Test for breakage, then uninstall.</p>
           </section>
           <section>
@@ -859,6 +898,21 @@ with Xdebug v2.5.0, Copyright (c) 2002-2016, by Derick Rethans</code></pre>
             <p class="fragment">Remove, <code>drush cr && drush updb</code></p>
             <p class="fragment">Test locally first!</p>
           </section>
+          <section data-transition="none">
+            <img src="images/messyDocroot1.png" />
+          </section>
+          <section data-transition="none">
+            <img src="images/messyDocroot2.png" />
+          </section>
+          <section data-transition="none">
+            <img src="images/messyDocroot3.png" />
+          </section>
+          <section data-transition="none">
+            <img src="images/messyDocroot4.png" />
+          </section>
+          <section data-transition="none">
+            <img src="images/messyDocroot5.png" />
+          </section>
           <section>
             <h2>Messy docroot</h2>
             <p class="fragment">Can create automation, composer problems</p>
@@ -889,7 +943,7 @@ with Xdebug v2.5.0, Copyright (c) 2002-2016, by Derick Rethans</code></pre>
           <section>
             <h2>Where are you slow?</h2>
             <p class="fragment">Certain pages?</p>
-            <p class="fragment">Certain servers?</p>
+            <p class="fragment">Logged in or out?</p>
             <p class="fragment">Everywhere!?</p>
           </section>
           <section>
@@ -1051,7 +1105,7 @@ with Xdebug v2.5.0, Copyright (c) 2002-2016, by Derick Rethans</code></pre>
           <section>
             <h2>Can it be changed?</h2>
             <p class="fragment">Isolated features easier to replace</p>
-            <p class="fragment">Accept or deprecate core features</p>
+            <p class="fragment">Accept or deprecate essential features</p>
           </section>
           <section>
             <h2>Look to the long term</h2>

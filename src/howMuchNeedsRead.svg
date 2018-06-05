@@ -17,7 +17,7 @@
    version="1.1"
    inkscape:version="0.92.2 2405546, 2018-03-11"
    sodipodi:docname="howMuchNeedsRead.svg"
-   inkscape:export-filename="../images/howMuchNeedsRead19.png"
+   inkscape:export-filename="../images/howMuchNeedsRead10.png"
    inkscape:export-xdpi="96"
    inkscape:export-ydpi="96">
   <defs
@@ -117,7 +117,7 @@
      inkscape:cx="529.0398"
      inkscape:cy="353.88768"
      inkscape:document-units="px"
-     inkscape:current-layer="layer13"
+     inkscape:current-layer="layer12"
      showgrid="false"
      units="px"
      inkscape:window-width="3200"
@@ -407,7 +407,7 @@
            height="143.21355"
            x="507.49493"
            y="310.93222" /></flowRegion><flowPara
-         id="flowPara1002"></flowPara></flowRoot>    <flowRoot
+         id="flowPara1002" /></flowRoot>    <flowRoot
        xml:space="preserve"
        id="flowRoot4762-8-9-7-3-1-1"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0.01%;font-family:'Anime Ace 2.0 BB';-inkscape-font-specification:'Anime Ace 2.0 BB, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#e8e8e8;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -480,7 +480,7 @@
          sodipodi:role="line"
          id="tspan1162"
          x="673.45599"
-         y="442.11893"></tspan></text>
+         y="442.11893" /></text>
   </g>
   <g
      inkscape:groupmode="layer"
@@ -593,7 +593,7 @@
            y="229.97247"
            style="fill:#e8e8e8;fill-opacity:1;stroke:none;stroke-opacity:1" /></flowRegion><flowPara
          style="font-size:30px;line-height:1.25;fill:#e8e8e8;fill-opacity:1;stroke:none;stroke-opacity:1"
-         id="flowPara6493-5-29-2-7">...And a back-link to the summary!</flowPara></flowRoot>    <path
+         id="flowPara6493-5-29-2-7">...And a link back to the summary!</flowPara></flowRoot>    <path
        style="opacity:1;fill:none;fill-opacity:1;stroke:#e8e8e8;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        d="m 715.42773,362.51562 a 156.02905,74.97084 0 0 0 -156.02929,74.97071 156.02905,74.97084 0 0 0 156.02929,74.9707 156.02905,74.97084 0 0 0 57.93165,-5.39648 l 87.84374,60.50195 -43.58398,-73.54688 a 156.02905,74.97084 0 0 0 53.83594,-56.52929 156.02905,74.97084 0 0 0 -156.02735,-74.97071 z"
        id="path1964"
