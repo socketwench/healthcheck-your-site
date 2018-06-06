@@ -478,6 +478,7 @@ Load average: 0.70 0.87 0.92 4/1173 264
     1     0 apache   S     368m   2%   0   0% /usr/sbin/httpd -D FOREGROUND -f /
    42     0 apache   S     6244   0%   1   0% /bin/bash
   263    42 apache   R     1532   0%   0   0% top</code></pre>
+            <small class="fragment">(Press <code>q</code> to quit)</small>
           </section>
           <section data-transition="none" data-background-transition="none" data-background="images/sharedSelfHostedNeedsAudit1.png" data-background-size="contain">
             <h2>Managed Hosting</h2>
@@ -501,7 +502,7 @@ Load average: 0.70 0.87 0.92 4/1173 264
           </section>
           <section>
             <h2>CLI vs. Web PHP</h2>
-            <p class="fragment">PHP version should always match</p>
+            <p class="fragment">PHP version (x.y) should always match</p>
             <p class="fragment">Configuration may differ, but only minor</p>
           </section>
           <section data-transition="none" data-background-transition="none" data-background="images/whatAboutCliPhp1.png" data-background-size="contain">
@@ -762,7 +763,7 @@ with Xdebug v2.5.0, Copyright (c) 2002-2016, by Derick Rethans</code></pre>
           </section>
           <section>
             <h2>Find a clean backup</h2>
-            <p class="fragment">DB and files from before the hack</p>
+            <p class="fragment">DB, code, and files from before the hack</p>
             <p class="fragment">Be sure it isn't compromised!</p>
           </section>
           <section>
@@ -879,6 +880,11 @@ with Xdebug v2.5.0, Copyright (c) 2002-2016, by Derick Rethans</code></pre>
             <p class="fragment">Ease of use might be worth it</p>
           </section>
           <section>
+            <h2>Clearing Watchdog</h2>
+            <p class="fragment"><code>drush watchdog-delete all</code></p>
+            <p class="fragment">Delete can also be targeted, see <a href="https://drushcommands.com/drush-8x/watchdog/watchdog-delete/">Drush Docs</a></p>
+          </section>
+          <section>
             <h2>Syslog module</h2>
             <p class="fragment">Write to web server syslog instead of DB</p>
             <p class="fragment">Faster, requires more Ops coordination</p>
@@ -890,8 +896,33 @@ with Xdebug v2.5.0, Copyright (c) 2002-2016, by Derick Rethans</code></pre>
           </section>
           <section>
             <h2>Which module to remove?</h2>
-            <p class="fragment"><code>system</code> table, <code>filename</code> column</p>
-            <p class="fragment">Remove other copies</p>
+            <p class="fragment">There's what you think...</p>
+            <p class="fragment">...and what Drupal thinks.</p>
+          </section>
+          <section>
+            <h2>Finding the active module</h2>
+            <p class="fragment"><code>drush pmi <em>module_name</em></code></p>
+            <p class="fragment">Look for <code>Path</code></p>
+          </section>
+          <section>
+            <pre><code>$ drush pmi dblog</code></pre>
+            <pre class="fragment"><code> Extension        :  dblog
+ Project          :  Unknown
+ Type             :  module
+ Title            :  Database Logging
+...
+ Path             :  core/modules/dblog
+...
+ Permissions      :  none
+ Configure        :  system.logging_settings</code></pre>
+          </section>
+          <section>
+            <h2>No pmi in Drush 9</h2>
+            <pre class="fragment"><code>drush ev
+  "return \Drupal::moduleHandler()
+    ->getModule('module_name')
+    ->getPath();"</code></pre>
+            <small class="fragment">(All on one line)</small>
           </section>
           <section>
             <h2>De-duping modules</h2>
@@ -919,9 +950,9 @@ with Xdebug v2.5.0, Copyright (c) 2002-2016, by Derick Rethans</code></pre>
             <p class="fragment">Move to files directory, use .htaccess redirect</p>
           </section>
           <section>
-            <h2>Caching</h2>
+            <h2>Caching & Aggregation</h2>
             <p class="fragment">Enable for all sites!</p>
-            <p class="fragment">...except when using Varnish, etc.</p>
+            <p class="fragment">Consider minimum lifetime carefully</p>
           </section>
           <section data-transition="none">
             <img src="images/thatsTheEasyStuff1.png" />
@@ -948,7 +979,7 @@ with Xdebug v2.5.0, Copyright (c) 2002-2016, by Derick Rethans</code></pre>
           </section>
           <section>
             <h2>Web profiler</h2>
-            <p class="fragment">Part of dev module</p>
+            <p class="fragment">Part of <a href="https://www.drupal.org/project/devel">devel</a> module</p>
             <p class="fragment">Times major parts of processing</p>
           </section>
           <section>
@@ -966,16 +997,7 @@ with Xdebug v2.5.0, Copyright (c) 2002-2016, by Derick Rethans</code></pre>
             <h2>Finding PHP Bottlenecks</h2>
             <p class="fragment">XDebug Profiler</h2>
             <p class="fragment">Complex set up, should not be run on live</p>
-          </section>
-          <section>
-            <h2>Use in Flight Deck</h2>
-            <p class="fragment">Docker-based local environment</p>
-            <p class="fragment">Includes XDebug profiles and Webgrind</p>
-          </section>
-          <section>
-            <h2>Getting Flight Deck</h2>
-            <p class="fragment"><a href="https://github.com/ten7/flight-deck">github.com/ten7/flight-deck</a></p>
-            <p class="fragment"><a href="http://flight-deck.readthedocs.io/en/latest/gettingStarted/">flight-deck.readthedocs.io/en/latest/gettingStarted/</a></p>
+            <p class="fragment">Included out of the box in <a href="https://github.com/ten7/flight-deck">Flight Deck</a></p>
           </section>
           <section>
             <h2>Performance is a process</h2>
@@ -1149,6 +1171,7 @@ with Xdebug v2.5.0, Copyright (c) 2002-2016, by Derick Rethans</code></pre>
           <section>
             <h2>Special thanks</h2>
             <p class="fragment">Twin Cities Drupal</p>
+            <p class="fragment"><a href="https://twitter.com/timplunkett">@timplunkett</a>, <a href="https://twitter.com/wizonesolutions">@wizonesolutions</a></p>
 						<p class="fragment">TEN7</p>
             <p class="fragment"><a href="https://www.patreon.com/socketwench">patreon.com/socketwench</a></p>
           </section>
