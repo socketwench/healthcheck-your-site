@@ -10,6 +10,10 @@ In this session we'll introduce the tools and techniques to perform a health-che
 
 Knowledge of Drupal, business processes, and the command line are helpful, but not required.
 
+## Slides
+
+The slides themselves are available at [http://socketwench.github.io/healthcheck-your-site](http://socketwench.github.io/healthcheck-your-site)
+
 ## Speaklog
 
 * TBA
