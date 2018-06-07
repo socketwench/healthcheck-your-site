@@ -63,12 +63,6 @@
           <section>
             <h1>"But my site is fine!"</h1>
           </section>
-          <!--
-            This doesn't really sell the idea of an audit all that well.
-            Most site stakeholders either don't think their site needs
-            an audit, or think they are too invasive and embarassing.
-            They'd rather wait until something actually breaks.
-          -->
           <section>
             <h2>Every site is healthy</h2>
             <p class="fragment">...until it isn't.</p>
@@ -116,7 +110,7 @@
             <img src="images/iHaveABadFeeling3.png" />
           </section>
           <section>
-            <h2>A feeling isn't an audit</h2>
+            <h2>A feeling isn't an healthcheck</h2>
             <p class="fragment">...but a feeling is a sign you need one.</p>
           </section>
           <section  data-transition="none" data-background-transition="none" data-background="images/didWeBuildItRight1.png" data-background-size="contain">
@@ -130,13 +124,6 @@
             <p class="fragment">Check if you're on the right path</p>
             <p class="fragment">Can be difficult to check in-house</p>
             <p>&nbsp;</p>
-          </section>
-          <!--
-            What benefit does an audit provide if bad things are found?
-          -->
-          <section>
-            <h2>Your experience is not universal</h2>
-            <p class="fragment">Anonymous survey, external agency</p>
           </section>
           <section>
             <h2>It's better to know and plan</h2>
@@ -379,16 +366,6 @@
             <p class="fragment">File, code, DB sizes</p>
             <p class="fragment">Sometimes useful! Depends on your site.</p>
           </section>
-          <section>
-            <h2>PHP code analysis</h2>
-            <p class="fragment">Code smells, copy-pasting, mess detection</p>
-            <p class="fragment">Requires additional composer-installed utilites</p>
-          </section>
-          <section>
-            <h2>Even more things</h2>
-            <p class="fragment">Site Audit is extensible!</p>
-            <p class="fragment">Reports differ slightly between D7 & D8</p>
-          </section>
           <section data-transition="none">
             <img src="images/siteAuditAndDoneRight1.png" />
           </section>
@@ -410,10 +387,6 @@
           <section>
             <h1>Infrastructure checkups</h1>
           </section>
-          <!--
-            COMIC
-            Still on fire, huh?
-          -->
           <section>
             <h2>Where're you hosted?</h2>
             <p class="fragment">Shared hosting</p>
@@ -425,11 +398,15 @@
             <p class="fragment">What was your primary motive?</p>
             <p class="fragment">Is that still true?</p>
           </section>
-          <!--
-            COMIC
-            I'm not a Linux master...
-            Is there anything I can check?
-          -->
+          <section data-transition="none">
+            <img src="images/notALinuxWizard1.png" />
+          </section>
+          <section data-transition="none">
+            <img src="images/notALinuxWizard2.png" />
+          </section>
+          <section data-transition="none">
+            <img src="images/notALinuxWizard3.png" />
+          </section>
           <section>
             <h2>Enough memory?</h2>
             <p class="fragment"><code>free</code> utility</p>
@@ -522,27 +499,6 @@ Copyright (c) 1997-2016 The PHP Group
 Zend Engine v2.6.0, Copyright (c) 1998-2016 Zend Technologies
 with Zend OPcache v7.0.6-dev, Copyright (c) 1999-2016, by Zend Technologies
 with Xdebug v2.5.0, Copyright (c) 2002-2016, by Derick Rethans</code></pre>
-            </section>
-          <section>
-            <h2>Database server</h2>
-            <p class="fragment">Same or separate, <em>latency</em> is the key!</p>
-            <p class="fragment">Common problem for shared hosts</p>
-          </section>
-          <section>
-            <h2>Measuring latency</h2>
-            <p class="fragment"><code>ping</code> utility</p>
-            <p class="fragment">From web server, <code>ping</code> DB server</p>
-          </section>
-          <section>
-            <h2>Ping measures the network</h2>
-            <p class="fragment">not DB responsivness!</p>
-          </section>
-          <section>
-            <pre><code>$ ping 192.168.1.10</code></pre>
-            <pre class="fragment"><code>PING 192.168.1.10 (192.168.1.10) 56(84) bytes of data.
-64 bytes from 192.168.1.10: icmp_seq=1 ttl=63 time=0.378 ms
-64 bytes from 192.168.1.10: icmp_seq=2 ttl=63 time=0.473 ms</code></pre>
-            <small class="fragment">(Use Ctrl-C to exit)</small>
           </section>
           <section>
             <h2>As your site grows...</h2>
@@ -616,19 +572,14 @@ with Xdebug v2.5.0, Copyright (c) 2002-2016, by Derick Rethans</code></pre>
             <p class="fragment">You suspect a breach</p>
           </section>
           <section>
-            <h2>Non-security reasons</h2>
-            <p class="fragment">Whenever you adopt a site</p>
-            <p class="fragment">Bad practice core or module modification</p>
-          </section>
-          <section>
             <h2>Installation</h2>
             <p class="fragment"><code class="shell">composer require drupal/hacked</code></p>
             <p class="fragment"><code class="shell">drush en -y hacked</code></p>
           </section>
           <section>
             <h2>Run against Live</h2>
-            <p class="fragment">Results can differ with your local</p>
-            <p class="fragment">Module can be removed after use</p>
+            <p class="fragment">Not your local!</p>
+            <p class="fragment">Untracked, "cloaked" files</p>
           </section>
           <section>
             <h2>Running the report</h2>
@@ -709,19 +660,14 @@ with Xdebug v2.5.0, Copyright (c) 2002-2016, by Derick Rethans</code></pre>
             <p class="fragment">Look for duplicate files & modules</p>
           </section>
           <section>
-            <h2>Checking logs</h2>
-            <p class="fragment">Look for PHP errors, odd 404s</p>
-            <p class="fragment">May be subtle or buried</p>
+            <h2>Check the logs?</h2>
+            <p class="fragment">Use only to corroborate a hack...</p>
+            <p class="fragment">...<strong>not</strong> to detect one.</p>
           </section>
           <section>
             <h2>"Wildlife"</h2>
             <p class="fragment">The 'net isn't a clean place!</p>
             <p class="fragment">Frequent drive-by attacks are <strong>common</strong></p>
-          </section>
-          <section>
-            <h2>2018 Drupalgeddons</h2>
-            <p class="fragment">Can leave no signature!</p>
-            <p class="fragment">Not patched on patch day? Assume you're hacked.</p>
           </section>
           <section data-transition="none">
             <img src="images/youveBeenHacked1.png" />
@@ -865,64 +811,14 @@ with Xdebug v2.5.0, Copyright (c) 2002-2016, by Derick Rethans</code></pre>
             <p class="fragment">Revisions past the last 3 are low value</p>
           </section>
           <section>
-            <h2>Opt-in Revisions</h2>
-            <p class="fragment">Disable automatic revisions by type</p>
-            <p class="fragment">Doesn't clean out existing, old revisions</p>
-          </section>
-          <section>
             <h2><a href="https://www.drupal.org/project/node_revision_delete">Node Revision Delete</a></h2>
             <p class="fragment">Limits # of revisions by type</p>
             <p class="fragment">Cleans out old revisions</p>
           </section>
           <section>
-            <h2>Watchdog too big</h2>
-            <p class="fragment">dblog module can be slow</p>
-            <p class="fragment">Ease of use might be worth it</p>
-          </section>
-          <section>
-            <h2>Clearing Watchdog</h2>
-            <p class="fragment"><code>drush watchdog-delete all</code></p>
-            <p class="fragment">Delete can also be targeted, see <a href="https://drushcommands.com/drush-8x/watchdog/watchdog-delete/">Drush Docs</a></p>
-          </section>
-          <section>
-            <h2>Syslog module</h2>
-            <p class="fragment">Write to web server syslog instead of DB</p>
-            <p class="fragment">Faster, requires more Ops coordination</p>
-          </section>
-          <section>
             <h2>Duplicate modules</h2>
             <p class="fragment">Confusing, causes missed updates</p>
             <p class="fragment">Can be sign of a hack</p>
-          </section>
-          <section>
-            <h2>Which module to remove?</h2>
-            <p class="fragment">There's what you think...</p>
-            <p class="fragment">...and what Drupal thinks.</p>
-          </section>
-          <section>
-            <h2>Finding the active module</h2>
-            <p class="fragment"><code>drush pmi <em>module_name</em></code></p>
-            <p class="fragment">Look for <code>Path</code></p>
-          </section>
-          <section>
-            <pre><code>$ drush pmi dblog</code></pre>
-            <pre class="fragment"><code> Extension        :  dblog
- Project          :  Unknown
- Type             :  module
- Title            :  Database Logging
-...
- Path             :  core/modules/dblog
-...
- Permissions      :  none
- Configure        :  system.logging_settings</code></pre>
-          </section>
-          <section>
-            <h2>No pmi in Drush 9</h2>
-            <pre class="fragment"><code>drush ev
-  "return \Drupal::moduleHandler()
-    ->getModule('module_name')
-    ->getPath();"</code></pre>
-            <small class="fragment">(All on one line)</small>
           </section>
           <section>
             <h2>De-duping modules</h2>
@@ -952,7 +848,7 @@ with Xdebug v2.5.0, Copyright (c) 2002-2016, by Derick Rethans</code></pre>
           <section>
             <h2>Caching & Aggregation</h2>
             <p class="fragment">Enable for all sites!</p>
-            <p class="fragment">Consider minimum lifetime carefully</p>
+            <p class="fragment">Consider maximum lifetime carefully</p>
           </section>
           <section data-transition="none">
             <img src="images/thatsTheEasyStuff1.png" />
@@ -997,10 +893,9 @@ with Xdebug v2.5.0, Copyright (c) 2002-2016, by Derick Rethans</code></pre>
             <h2>Finding PHP Bottlenecks</h2>
             <p class="fragment">XDebug Profiler</h2>
             <p class="fragment">Complex set up, should not be run on live</p>
-            <p class="fragment">Included out of the box in <a href="https://github.com/ten7/flight-deck">Flight Deck</a></p>
           </section>
           <section>
-            <h2>Performance is a process</h2>
+            <h2>Remediation is a process</h2>
             <p class="fragment">Not a fix.</p>
           </section>
         </section>
@@ -1130,16 +1025,6 @@ with Xdebug v2.5.0, Copyright (c) 2002-2016, by Derick Rethans</code></pre>
             <p class="fragment">Accept or deprecate essential features</p>
           </section>
           <section>
-            <h2>Look to the long term</h2>
-            <p class="fragment">Fast fixes bring brief benfit</p>
-          </section>
-        </section>
-
-        <section>
-          <section>
-            <h1>When to ask for help</h1>
-          </section>
-          <section>
             <h2>Time for a new site?</h2>
             <p class="fragment">Current site code unsupported</p>
             <p class="fragment">Cheaper, easier to rebuild than fix</p>
@@ -1149,11 +1034,7 @@ with Xdebug v2.5.0, Copyright (c) 2002-2016, by Derick Rethans</code></pre>
             <h2>Rebuilds easier on staff</h2>
             <p class="fragment">"Rip the bandage off" approach</p>
             <p class="fragment">Enforce best practices from the start</p>
-          </section>
-          <section>
-            <h2>Hosting change</h2>
-            <p class="fragment">Create new live environment</p>
-            <p class="fragment">Update domain IP at launch</p>
+            <p class="fragment">Coodinate with a hosting change</p>
           </section>
           <section>
             <h2>Don't go alone</h2>
@@ -1165,14 +1046,15 @@ with Xdebug v2.5.0, Copyright (c) 2002-2016, by Derick Rethans</code></pre>
             <p class="fragment">Good "get to know each other" exercise</p>
             <p class="fragment">Informs better estimating</p>
           </section>
-        </section>
-
-        <section>
           <section data-background="images/teamten7.jpeg" class="teamten7">
             <h2>TEN7 does audits!</h2>
-            <p>Flat fee $2,000</p>
+            <p>Flat pricing</p>
             <p>Analysis and recommendations</p>
             <p><a href="mailto:hi@ten7.com">hi@ten7.com</a></p>
+          </section>
+          <section>
+            <h2>Look to the long term</h2>
+            <p class="fragment">Fast fixes bring brief benfit</p>
           </section>
         </section>
 
