@@ -279,13 +279,6 @@
             <p class="fragment"><code>drush cc drush</code></p>
           </section>
           <section>
-            <h2>Installation for D8</h2>
-            <p class="fragment"><code>composer require drupal/site_audit</code></p>
-            <p class="fragment"><code>mkdir drush</code></p>
-            <p class="fragment"><code>mv modules/contrib/site_audit drush/</code></p>
-            <p class="fragment"><code>drush cr drush</code></p>
-          </section>
-          <section>
             <pre><code class="shell">cd path/to/your/site</code></pre>
             <pre class="fragment"><code class="shell">drush aa
   --html
@@ -306,7 +299,7 @@
           <section data-transition="none">
             <img src="images/howMuchNeedsRead3.png" />
           </section>
-          <section data-transition="none">
+          <!-- <section data-transition="none">
             <img src="images/howMuchNeedsRead4.png" />
           </section>
           <section data-transition="none">
@@ -326,17 +319,11 @@
           </section>
           <section data-transition="none">
             <img src="images/howMuchNeedsRead10.png" />
-          </section>
+          </section> -->
           <section>
             <h2>Best Practice Checks</h2>
             <p class="fragment">Read them all!</p>
             <p class="fragment">Highest value checks in the whole report</p>
-          </section>
-          <section>
-            <h2>services.yml warning</h2>
-            <p class="fragment">Techincally correct, but...</p>
-            <p class="fragment">...core's own services.yml is preferred.</p>
-            <small class="fragment"><a href="https://www.drupal.org/project/drupal/issues/2547447">drupal.org/project/drupal/issues/2547447</a></small>
           </section>
           <section>
             <h2>Caching Settings</h2>
@@ -373,10 +360,25 @@
             <h2><a href="https://www.drupal.org/project/healthcheck">Healthcheck module</a></h2>
             <p class="fragment">Not a Drush command!</p>
             <p class="fragment">Monitors continually, pluggable notifications</p>
-            <small class="fragment">Still in development</small>
+            <small class="fragment">Currently in alpha!</small>
+          </section>
+          <section>
+            <h2>Installing Healthcheck</h2>
+            <p class="fragment"><code>composer require drupal/healthcheck</code></p>
+            <p class="fragment">Enable like any module</p>
+          </section>
+          <section>
+            <h2>Running an Ad hoc report</h2>
+            <p class="fragment">Admin &gt; Reports &gt; Healthcheck</p>
+            <p class="fragment">Action-oriented, priority ordered report</p>
           </section>
           <section>
             <img src="images/healthcheck.png" />
+          </section>
+          <section>
+            <h2>Other Features</h2>
+            <p class="fragment">Email and Webhook notifications</p>
+            <p class="fragment">Views-based historical reports</p>
           </section>
         </section>
 
@@ -539,16 +541,6 @@ with Xdebug v2.5.0, Copyright (c) 2002-2016, by Derick Rethans</code></pre>
             <p class="fragment">Expediency, lack of knowledge, bug fixes</p>
             <p class="fragment">Unaware of "offical" patching process</p>
           </section>
-          <section>
-            <h2>Patch, don't mod</h2>
-            <p class="fragment">Post issue & patch if broad benefit...</p>
-            <p class="fragment">...or at least keep <code>*.patch</code> file in repo.</p>
-          </section>
-          <section>
-            <h2>Right way to patch</h2>
-            <p class="fragment">Use <a href="https://github.com/cweagans/composer-patches">cweagans/composer-patches</a></p>
-            <p class="fragment">Refer to the patch on D.O if posted</p>
-          </section>
           <section data-transition="none">
             <img src="images/dontKnowIfModded1.png" />
           </section>
@@ -616,8 +608,13 @@ with Xdebug v2.5.0, Copyright (c) 2002-2016, by Derick Rethans</code></pre>
           </section>
           <section>
             <h2>Going Legit</h2>
-            <p class="fragment">Extract patch from changes</p>
-            <p class="fragment">Post to D.O, add to repo</p>
+            <p class="fragment">Create patch from changes, add to site repo</p>
+            <p class="fragment">Post to D.O if broad benefit</p>
+          </section>
+          <section>
+            <h2>Right way to mod</h2>
+            <p class="fragment">Use <a href="https://github.com/cweagans/composer-patches">cweagans/composer-patches</a></p>
+            <p class="fragment">Refer to the patch on D.O if posted</p>
           </section>
           <section>
             <h2>Modding isn't wrong</h2>
@@ -832,7 +829,7 @@ with Xdebug v2.5.0, Copyright (c) 2002-2016, by Derick Rethans</code></pre>
             <p class="fragment">Remove, <code>drush cr && drush updb</code></p>
             <p class="fragment">Test locally first!</p>
           </section>
-          <section data-transition="none">
+          <!-- <section data-transition="none">
             <img src="images/messyDocroot1.png" />
           </section>
           <section data-transition="none">
@@ -851,12 +848,7 @@ with Xdebug v2.5.0, Copyright (c) 2002-2016, by Derick Rethans</code></pre>
             <h2>Messy docroot</h2>
             <p class="fragment">Can create automation, composer problems</p>
             <p class="fragment">Move to files directory, use .htaccess redirect</p>
-          </section>
-          <section>
-            <h2>Caching & Aggregation</h2>
-            <p class="fragment">Enable for all sites!</p>
-            <p class="fragment">Consider maximum lifetime carefully</p>
-          </section>
+          </section> -->
           <section data-transition="none">
             <img src="images/thatsTheEasyStuff1.png" />
           </section>
@@ -874,33 +866,6 @@ with Xdebug v2.5.0, Copyright (c) 2002-2016, by Derick Rethans</code></pre>
             <p class="fragment">Different tools, approaches</p>
             <p class="fragment">Time and brain intensive process</p>
           </section>
-          <!-- <section>
-            <h2>Where are you slow?</h2>
-            <p class="fragment">Certain pages?</p>
-            <p class="fragment">Logged in or out?</p>
-            <p class="fragment">Everywhere!?</p>
-          </section>
-          <section>
-            <h2>Web profiler</h2>
-            <p class="fragment">Part of <a href="https://www.drupal.org/project/devel">devel</a> module</p>
-            <p class="fragment">Times major parts of processing</p>
-          </section>
-          <section>
-            <img src="images/webprofiler.png" />
-          </section>
-          <section>
-            <img src="images/webprofiler_page.png" />
-          </section>
-          <section>
-            <h2>Slow DB vs. PHP</h2>
-            <p class="fragment">Code can fixed</p>
-            <p class="fragment">Slow DBs require hosting change</p>
-          </section>
-          <section>
-            <h2>Finding PHP Bottlenecks</h2>
-            <p class="fragment">XDebug Profiler</h2>
-            <p class="fragment">Complex set up, should not be run on live</p>
-          </section> -->
           <section>
             <h2>Remediation is a process</h2>
             <p class="fragment">Not a fix.</p>
@@ -970,13 +935,10 @@ with Xdebug v2.5.0, Copyright (c) 2002-2016, by Derick Rethans</code></pre>
             <img src="images/contentProblems2.png" />
           </section>
           <section>
-            <h2>Do a content audit</h2>
-            <p class="fragment">Inventory of all types and content</p>
-          </section>
-          <section>
             <h2>Rethink Content Stategy</h2>
-            <p class="fragment">Drop old, irrelvent content</p>
+            <p class="fragment">Do a content audit</p>
             <p class="fragment">Use card sorting to rediscover groupings</p>
+            <p class="fragment">Drop old, irrelvent content</p>
           </section>
           <section>
             <h2>Merge, split types</h2>
@@ -1017,19 +979,9 @@ with Xdebug v2.5.0, Copyright (c) 2002-2016, by Derick Rethans</code></pre>
             <img src="images/deeperThanContent.png" />
           </section>
           <section>
-            <h2>Custom implementions</h2>
-            <p class="fragment">Contrib available, but wasn't used</p>
-            <p class="fragment">Misses security reviews, bug fixes</p>
-          </section>
-          <section>
             <h2>Overuse, abuse of a feature</h2>
             <p class="fragment">Causes gradual performance loss</p>
             <p class="fragment">Often unaware, or unintentional</p>
-          </section>
-          <section>
-            <h2>Can it be changed?</h2>
-            <p class="fragment">Isolated features easier to replace</p>
-            <p class="fragment">Accept or deprecate essential features</p>
           </section>
           <section>
             <h2>Time for a new site?</h2>
@@ -1068,7 +1020,7 @@ with Xdebug v2.5.0, Copyright (c) 2002-2016, by Derick Rethans</code></pre>
         <section>
           <section>
             <h2>Special thanks</h2>
-            <p class="fragment">Drupalcorn</p>
+            <p class="fragment">Drupalcamp Ottawa</p>
             <p class="fragment"><a href="https://twitter.com/timplunkett">@timplunkett</a>, <a href="https://twitter.com/wizonesolutions">@wizonesolutions</a></p>
 						<p class="fragment"><a href="https://ten7.com/">TEN7</a></p>
             <p class="fragment"><a href="https://www.patreon.com/socketwench">patreon.com/socketwench</a></p>
