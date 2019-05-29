@@ -65,6 +65,11 @@ position: relative;
   text-shadow: none;
   word-wrap: break-word; }
 
+.teamten7 h2,
+.teamten7 p{
+  text-shadow: 0 0 1rem black;
+}
+
 .reveal h1 {
   font-size: 2.44em;
   font-family: 'Permanent Marker', cursive;
